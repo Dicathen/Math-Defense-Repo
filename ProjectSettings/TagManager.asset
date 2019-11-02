@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Target
+  - Buttons
+  - Selectable
+  - Inverse
+  - Originator
+  - VelocityInitial
+  - Boundary
+  - Path
+  - Tower
+  - No-No Zone
+  - Corners
+  - Defense
+  - Buttons1
+  - Buttons0
+  - Buttons2
+  - Buttons3
+  - Buttons4
+  - Buttons5
+  - Buttons6
+  - Buttons7
+  - Buttons8
+  - Buttons9
+  - Buttons10
+  - Buttons11
+  - Buttons12
+  - Buttons13
+  - Towers1
+  - Interactable
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
