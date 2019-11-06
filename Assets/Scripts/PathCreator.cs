@@ -36,7 +36,7 @@ public class PathCreator : MonoBehaviour
         }
         */
         if (other.gameObject.CompareTag("Inverse")) speed = 3;
-        if (other.gameObject.CompareTag("VelocityInitial")) speed = 10;
+        if (other.gameObject.CompareTag("VelocityInitial")) speed = 5;
     }
 
     private void OnTriggerExit(Collider other)
@@ -52,6 +52,7 @@ public class PathCreator : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("No-No Zone")) Destroy(other);
+        if (other.gameObject.CompareTag("Inverse")) speed = 3;
         
     }
 
@@ -59,7 +60,7 @@ public class PathCreator : MonoBehaviour
      {
          while (!token.IsCancellationRequested)
          {
-             for (int i = 2; i <=9; i++)
+             for (int i = 2; i <= 9; i++)
              {
                  await Task.Delay(1);
                  speed = i;
