@@ -8,7 +8,7 @@ public class Rounds : MonoBehaviour
     public GameObject MyTextGameObject;
     private TextMeshProUGUI _textMesh;
 
-    private int round =1;
+    public int round =1;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +22,8 @@ public class Rounds : MonoBehaviour
     void Update()
     {
         
-        CheckForRound();
+        _textMesh.text = "Round: " + round;
+        //CheckForRound();
 
     }
 

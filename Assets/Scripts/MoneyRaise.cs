@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class MoneyRaise : MonoBehaviour
 {
     // Start is called before the first frame update
-    private int currency = 10;
+    public int currency = 10;
     private float timeLeft = 2;
     public GameObject MyTextGameObject; 
     private TextMeshProUGUI _textMesh;

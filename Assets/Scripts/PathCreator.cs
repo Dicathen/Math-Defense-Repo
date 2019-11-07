@@ -10,6 +10,7 @@ public class PathCreator : MonoBehaviour
 {
     public Transform[] target;
     public float speed;
+    public float beforeSpeed;
 
     private int current;
     public static int timeSeperation;
@@ -33,9 +34,16 @@ public class PathCreator : MonoBehaviour
             var tokenSource = new CancellationTokenSource();
             slowdown(tokenSource.Token);
             tokenSource.Cancel();
-        }
-        */
+        }*/
+
         if (other.gameObject.CompareTag("Inverse")) speed = 3;
+        /*{
+            beforeSpeed = speed;
+            GameObject toSlow;
+            toSlow = other.gameObject;
+            PathCreator slow = toSlow.GetComponent<PathCreator>();
+            speed = slow.speed / 2; 
+        }*/
         if (other.gameObject.CompareTag("VelocityInitial")) speed = 5;
     }
 
