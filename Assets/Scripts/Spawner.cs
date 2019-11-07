@@ -18,7 +18,7 @@ public class Spawner : MonoBehaviour
     private Boolean roundStart = false;
     private GameObject roundCounter;
     private int enemynum;
-    public int roundNum;
+    public int roundNumber;
     private int baseEnemyNum = 10;
     private int enemyRange = 0;
 
@@ -27,7 +27,7 @@ public class Spawner : MonoBehaviour
     { 
         roundCounter = GameObject.Find("Round");
         Rounds roundScript = roundCounter.GetComponent<Rounds>();
-        roundNum = roundScript.round;
+        roundNumber = roundScript.round;
         roundStart = true;
     }
 
@@ -42,7 +42,7 @@ public class Spawner : MonoBehaviour
                 timeSeperation = 1f;
             }
             timeSeperation -= Time.deltaTime;*/
-            RoundSystem(roundNum);
+            RoundSystem(roundNumber);
             executionTimes -= 1;
             /*if (executionTimes == 0)
             {
@@ -65,7 +65,7 @@ public class Spawner : MonoBehaviour
         if (roundNum < 10 )
         {
             enemynum = 0;
-            int spawnlimit = 1;
+            int spawnlimit = 10;
             if (timeSeperation <= 0)
             {
                 Instantiate(spwnee[enemynum], spawnPos.position, spawnPos.rotation);
@@ -81,13 +81,14 @@ public class Spawner : MonoBehaviour
                 Rounds roundScript = roundCounter.GetComponent<Rounds>();
                 roundScript.round++;
                 roundNum = roundScript.round;
+                roundNumber++;
                 print(roundNum);
             }
         }
         if (roundNum >= 10 && roundNum < 20)
         {
             enemynum = 1;
-            int spawnlimit = 1;
+            int spawnlimit = 10;
             if (timeSeperation <= 0)
             {
                 Instantiate(spwnee[1], spawnPos.position, spawnPos.rotation);
